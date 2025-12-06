@@ -1,4 +1,7 @@
 // src/app/shop/product/[handle]/page.tsx
+import { getProductByHandle } from '@/lib/shopify';
+import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import AddToCartButton from '@/components/AddToCartButton'; // Import AddToCartButton
 
 export default async function ProductPage({ params }: { params: { handle: string } }) {
