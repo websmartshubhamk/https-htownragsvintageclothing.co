@@ -1,65 +1,74 @@
-import Image from "next/image";
+import HeroSection from "@/components/HeroSection";
+import FeaturedProducts from "@/components/FeaturedProducts";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <HeroSection />
+      {/* Introduction Section - will create later */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            A VINTAGE CLOTHING SHOP IN HITCHIN, HERTFORDSHIRE
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+            At H-Town Rags, we take great pride in being one of the leading vintage clothing shops in Hertfordshire. Located in Hitchin, a great place for vintage and second-hand shopping, we are perfectly situated just off of the town square. We stock a wide range of vintage and second-hand clothing from all around the world. Everything from Denim, Workwear, USA Vintage to Sportswear, Italian Ladieswear and Band Tees. The list goes on…!
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+          <a href="/about" className="bg-[#D32F2F] hover:bg-[#A31F1F] text-white font-bold py-3 px-8 rounded-full transition duration-300">
+            Find Out More
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <FeaturedProducts />
+
+      {/* Brands Section - will create later */}
+      <section className="py-16 bg-gray-200">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Branded Second Hand & Vintage Clothing
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+            As one of the leading stockists of second hand and vintage clothing in Hertfordshire, we work hard to offer some of the most well known and loved brands around. Ranging from Levi's, Lee & Wrangler, Dickies & Carhartt, Harley Davidson & Ed Hardy, Nike & Adidas to North Face & Fjallraven we have an extremely wide variety in store. If you're a lover of vintage clothing, fashion, or looking to make more positive sustainable choices then why not pop along and take a dive into our rails and see what we have to offer.
+          </p>
+          <a href="/brands" className="bg-[#212121] hover:bg-[#424242] text-white font-bold py-3 px-8 rounded-full transition duration-300">
+            Our Brands
+          </a>
+        </div>
+      </section>
+
+      {/* Community Section - will create later */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Your Local Second Hand Clothing Shop in Hitchin
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+            We believe H-Town Rags is more than just a clothing shop, we are a community as well. We have been lucky to build relationships with so many lovely people and make so many friends whilst on this journey. So if you are in Hertfordshire or any of the surrounding areas, please do pop in to see us, or alternatively please feel free to contact us, we would love to hear from you!
+          </p>
+          <a href="/contact" className="bg-[#D32F2F] hover:bg-[#A31F1F] text-white font-bold py-3 px-8 rounded-full transition duration-300">
+            Contact Us
+          </a>
+        </div>
+      </section>
+
+      {/* Newsletter Signup - will create later */}
+      <section className="bg-gray-800 text-white py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Join Our Weekly Newsletter</h2>
+          <p className="text-lg mb-8">FILL IN YOUR DETAILS BELOW AND WE'LL KEEP YOU UP TO DATE WITH ALL OF OUR LATEST STOCK, SPECIAL OFFERS & POPUP EVENTS!</p>
+          {/* Placeholder for newsletter form */}
+          <form className="max-w-md mx-auto">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <input type="text" placeholder="Name" className="flex-grow p-3 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#D32F2F]" />
+              <input type="email" placeholder="Email Address" className="flex-grow p-3 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#D32F2F]" />
+              <button type="submit" className="bg-[#D32F2F] hover:bg-[#A31F1F] text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                SUBSCRIBE!
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </>
   );
 }
